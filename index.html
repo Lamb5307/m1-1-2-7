@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 13.0.0.0 for Windows">
+    <link rel="stylesheet" href="style.css">
+<TITLE>待ち行列理論</TITLE>
+</HEAD>
+<BODY>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h1>【　待ち行列理論　】</h1>
+
+<p id="buttom"><strong>表示</strong></p><br>
+銀行の窓口を考えたとき、人が銀行に到着して、窓口でサービスを受けます。このとき、窓口に誰も人がいなければ、待たずにサービスを受けることができます。逆に窓口に人が並んでいる場合、自分の番がくるまで待たなければいけません。<br>
+<p class="di"><b>｢待ち行列理論｣</b></p>とは、このような状況下、待たずにサービスを受けることができる確率や、人が並んでいる長さ、サービスを受ける平均時間などを計算する理論のことです。待ち行列理論を使って分析することで、計画時に適切な設備投資を行うことができ、運用してからのトラブルを最小限に抑えることができます。<br>
+待ち行列理論には、いくつかのモデルがありますが、ここでは、<b>｢M/M/1｣</b>のモデルで用いる要素について説明します。<br>
+<P><IMG src="1-1-2-7-1.JPG" width="500" border="0"></P>
+
+<strong>(1)平均到着率</strong><br>
+<p class="di"><b>｢平均到着率｣</b></p>とは、単位時間(秒)当たりに到着する人の割合(人数)のことです。<b>｢\(\lambda\)(ラムダ)｣</b>の記号で表します。<br>
+ある人が到着してから次の人が到着するまでの時間間隔を<p class="di"><b>｢到着間隔｣</b></p>といい、<p class="di"><b>｢平均到着間隔(TA:Time Arrival)｣</b></p>は\(\frac{1}{\lambda}\)となります。<br>
+<P><IMG src="1-1-2-7-2.JPG" width="500" border="0"></P>
+
+<strong>(2)平均サービス率</strong><br>
+<p class="di"><b>｢平均サービス率｣</b></p>とは、ひとつの窓口でどれだけサービスを処理できるかの割合のことです。<b>｢\(\mu\)(ミュー)｣</b>の記号で表します。<br>
+並んでいる人を処理する時間(秒)を<p class="di"><b>｢サービス時間｣</b></p>といい、<b>｢平均サービス時間(TS:Time Service)｣</b>は\(\frac{1}{\mu}\)となります。<br>
+<P><IMG src="1-1-2-7-3.JPG" width="500" border="0"></P>
+
+<strong>(3)平均利用率</strong><br>
+<p class="di"><b>｢平均利用率｣</b></p>とは、窓口がどれだけ利用されているかのことです。<b>｢\(\rho\)(ロー)｣</b>の記号で表します。<br>
+平均利用率は、次の計算式で求めることができます。<br>
+<P><IMG src="1-1-2-7-4.JPG" width="500" border="0"></P>
+
+<strong>(4)平均待ち時間</strong><br>
+<p class="di"><b>｢平均待ち時間(TW:Time Wait)｣</b></p>とは、サービスを受けるまでの待ち時間のことで、次の計算式で求めることができます。<br>
+<P><IMG src="1-1-2-7-5.JPG" width="500" border="0"></P>
+
+<strong>(5)平均応答時間</strong><br>
+<p class="di"><b>｢平均応答時間(T:Time)｣</b></p>とは、平均待ち時間と平均サービス時間を足した時間のことです。<br>
+<P><IMG src="1-1-2-7-6.JPG" width="500" border="0"></P>
+
+    <script>
+        const buttom = document.getElementById('buttom');
+        const diElements = document.querySelectorAll('.di'); // クラスの要素をすべて取得
+    
+        // マウスホバー時
+        buttom.addEventListener('mouseover', () => {
+            diElements.forEach(di => {
+                di.style.opacity = '1';
+            });
+        }, false);
+    
+        // マウスが離れている時
+        buttom.addEventListener('mouseleave', () => {
+            diElements.forEach(di => {
+                di.style.opacity = '0';
+            });
+        }, false);
+    </script>
+
